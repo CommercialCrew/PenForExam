@@ -1,4 +1,4 @@
-﻿
+
 // PenView.cpp: CPenView 클래스의 구현
 //
 
@@ -31,11 +31,7 @@ BEGIN_MESSAGE_MAP(CPenView, CView)
 	ON_WM_RBUTTONUP()
 	ON_WM_MOUSEMOVE()
 	ON_COMMAND(ID_SELECT_COLOR, &CPenView::OnSelectColor)
-	ON_COMMAND(ID_SIZE_1, &CPenView::OnSize1)
-	ON_COMMAND(ID_SIZE_4, &CPenView::OnSize4)
-	ON_COMMAND(ID_SIZE_8, &CPenView::OnSize8)
-	ON_COMMAND(ID_SIZE_16, &CPenView::OnSize16)
-	ON_COMMAND(ID_SIZE_32, &CPenView::OnSize32)
+	
 END_MESSAGE_MAP()
 
 // CPenView 생성/소멸
@@ -107,11 +103,14 @@ void CPenView::OnRButtonUp(UINT /* nFlags */, CPoint point)
 	OnContextMenu(this, point);
 }
 
-void CPenView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
+void CPenView::OnContextMenu(CWnd* pWnd, CPoint point)
 {
-#ifndef SHARED_HANDLERS
-	theApp.GetContextMenuManager()->ShowPopupMenu(IDR_POPUP_EDIT, point.x, point.y, this, TRUE);
-#endif
+
+	CMenu m;
+	m.LoadMenuW(IDR_MENU1);
+	CMenu* p;
+	p = m.GetSubMenu(0);
+	p->TrackPopupMenu(NULL, point.x, point.y, this, NULL);
 }
 
 
@@ -174,36 +173,49 @@ void CPenView::OnSelectColor()
 }
 
 
-void CPenView::OnSize1()
+
+
+
+BOOL CPenView::PreTranslateMessage(MSG* pMsg)
 {
-	Size = 1;
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-}
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	if (pMsg->message == WM_KEYDOWN) {
+		if (pMsg->wParam == '1') {
+			Size = 1;
+		}
 
+		if (pMsg->wParam == '2') {
+			Size = 4;
+		}
 
-void CPenView::OnSize4()
-{
-	Size = 4;
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-}
+		if (pMsg->wParam == '3') {
+			Size = 8;
+		}
 
+		if (pMsg->wParam == '4') {
+			Size = 16;
+		}
 
-void CPenView::OnSize8()
-{
-	Size = 8;
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-}
+		if (pMsg->wParam == '5') {
+			Size = 32;
+		}
 
+		if (pMsg->wParam == '6') {
+			Size = 64;
+		}
 
-void CPenView::OnSize16()
-{
-	Size = 16;
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
-}
+		if (pMsg->wParam == '7') {
+			Size = 72;
+		}
 
+		if (pMsg->wParam == '8') {
+			Size = 84;
+		}
 
-void CPenView::OnSize32()
-{
-	Size = 32;
-	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+		if (pMsg->wParam == '9') {
+			Size = 96;
+		}
+	}
+
+	return CView::PreTranslateMessage(pMsg);
 }
