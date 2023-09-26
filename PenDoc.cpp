@@ -1,4 +1,4 @@
-﻿
+
 // PenDoc.cpp: CPenDoc 클래스의 구현
 //
 
