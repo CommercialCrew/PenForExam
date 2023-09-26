@@ -1,4 +1,4 @@
-﻿
+
 // PenView.h: CPenView 클래스의 인터페이스
 //
 
@@ -46,11 +46,8 @@ protected:
 public:
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	afx_msg void OnSelectColor();
-	afx_msg void OnSize1();
-	afx_msg void OnSize4();
-	afx_msg void OnSize8();
-	afx_msg void OnSize16();
-	afx_msg void OnSize32();
+	
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 };
 
 #ifndef _DEBUG  // PenView.cpp의 디버그 버전
