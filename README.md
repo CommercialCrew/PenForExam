@@ -11,6 +11,10 @@
 
 실제로 펜의 색과 굵기조절을 적용해본 모습이다. 펜의 굵기는 키보드의 숫자키로 바꿀 수 있다.
 
+![additional_001](https://github.com/CommercialCrew/PenForExam/assets/101386134/84c76358-cb55-46b8-b43b-b16e187d5490)
+
+아무곳에서 우클릭하면 색과 굵기조절을 할 수 있는 메뉴가 나온다.
+
 ![003](https://github.com/CommercialCrew/PenForExam/assets/101386134/7bbbbcb4-33fb-4439-b799-e30262a56a10)
 
 ![004](https://github.com/CommercialCrew/PenForExam/assets/101386134/5454f2e5-8a4b-4446-b9dd-dd6a23c52a4e)
