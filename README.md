@@ -9,7 +9,7 @@
 ![002](https://github.com/CommercialCrew/PenForExam/assets/101386134/dbb9def1-124f-4be9-b7d7-d21012ada1db)
 
 
-실제로 펜의 색과 굵기조절을 적용해본 모습이다. 
+실제로 펜의 색과 굵기조절을 적용해본 모습이다. 펜의 굵기는 키보드의 숫자키로 바꿀 수 있다.
 
 ![003](https://github.com/CommercialCrew/PenForExam/assets/101386134/7bbbbcb4-33fb-4439-b799-e30262a56a10)
 
