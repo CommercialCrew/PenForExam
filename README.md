@@ -12,8 +12,11 @@
 실제로 펜의 색과 굵기조절을 적용해본 모습이다. 
 
 ![003](https://github.com/CommercialCrew/PenForExam/assets/101386134/7bbbbcb4-33fb-4439-b799-e30262a56a10)
+
 ![004](https://github.com/CommercialCrew/PenForExam/assets/101386134/5454f2e5-8a4b-4446-b9dd-dd6a23c52a4e)
+
 ![005](https://github.com/CommercialCrew/PenForExam/assets/101386134/d2c08bb3-adf4-44bc-bb22-74822c73cc59)
+
 ![006](https://github.com/CommercialCrew/PenForExam/assets/101386134/8df59e8b-0f06-47f9-9526-c635672448ed)
 
 마지막으로 파일로 저장하고 불러오기까지 해본 모습이다.
